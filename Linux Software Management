@@ -1,6 +1,7 @@
 #! bin/bash
-# Topic: Introduction to Linux
-# Lab: Introduction to an Amazon Linux Amazon Machine Image (AMI)
+# Topic: Linux Software Management
+# Author: ANmoljot Kaur
+# Date: 20 July, 2023
 
 #login as ec2-user in putty
 
