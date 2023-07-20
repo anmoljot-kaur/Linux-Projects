@@ -1,0 +1,40 @@
+#! bin/bash
+# Topic: Introduction to Linux
+# Lab: Introduction to an Amazon Linux Amazon Machine Image (AMI)
+
+#login as ec2-user in putty
+
+echo "Linux Software Management"
+
+cd companyA #to validate that you are in companyA folder
+
+sudo yum -y check-update #to querry repositories for available updates
+sudo yum update --security #to apply security related updates
+sudo yum -y upgrade #to update packages
+
+sudo yum install httpd -y #to install httpd
+sudo yum history list #to view history of updates
+
+pwd #validates that if you are in companyA folder
+
+echo "Install AWS CLI on Red Hat Linux"
+
+python3 --version #to verify if python is installed
+
+pip3 --version #to see if pip package manager is already installed
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" #download installation file of AWS CLI using curl command
+
+unzip awscliv2.zip  #unzip the installer
+
+sudo ./aws/install  #runs the program
+
+aws help #to verify if AWS CLI is working
+#chooose q to exit the help terminal
+
+aws configure #configuration command for AWS CLI
+#on the prompts enter AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format
+
+ sudo nano ~/.aws/credentials #to open the credentials file
+
+
