@@ -65,12 +65,12 @@ aws ec2 describe-instance-attribute --instance-id i-00082ea64743e9aa0 --attribut
 
 #output
 # instanceType
-#{
+# {
 #    "InstanceId": "i-00082ea64743e9aa0",
 #    "InstanceType": {
 #        "Value": "t3.micro"
 #    }
-#}
+# }
 
 #Congratulations!
 
