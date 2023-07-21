@@ -72,6 +72,8 @@ aws ec2 describe-instance-attribute --instance-id i-00082ea64743e9aa0 --attribut
 #    }
 # }
 
+#type exit at the terminal to close the application
+
 #Congratulations!
 
 
