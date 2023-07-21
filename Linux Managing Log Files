@@ -3,3 +3,20 @@
 # Author: Anmoljot Kaur
 # Date: 20 July, 2023
 # Objectives: 
+#  1. Review the lastlog and secure log outputs of the Linux machine
+
+#login as ec2-user in putty
+
+echo "Linux Managing Log Files"
+
+echo "Review the Secure Log Files"
+
+cd companyA  #to validate that you are in companyA folder
+
+sudo less /tmp/log/secure  #to use the secure log file as test
+#enter q to exit the window
+#usually secure log file is present in /var/log/secure
+
+sudo lastlog  #to view the last login times of all the users on the machine
+
+#Congratulations!
