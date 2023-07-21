@@ -19,4 +19,6 @@ sudo less /tmp/log/secure  #to use the secure log file as test
 
 sudo lastlog  #to view the last login times of all the users on the machine
 
+#type exit at the terminal to close the application
+
 #Congratulations!
