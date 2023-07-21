@@ -3,3 +3,7 @@
 # Author: Anmoljot Kaur
 # Date: 20 July, 2023
 # Objectives: 
+#  1. Create a directory
+
+echo "Bash Shell Scripting"
+
