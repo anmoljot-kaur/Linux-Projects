@@ -48,7 +48,7 @@ echo "Configure AWS CLI to connect to your AWS account"
 aws configure #configuration command for AWS CLI
 #on the prompts for AWS Access Key ID and AWS Secret Access Key, leave blank and press enter. For Default region name, enter us-west-2 and for Default output format, enter json.
 
- sudo nano ~/.aws/credentials #to open the credentials file
+sudo nano ~/.aws/credentials #to open the credentials file
 #enter the following with the AWS ACcess key and secret key we copied above
 #[default]
 #aws_access_key_id=<your access key ID>
