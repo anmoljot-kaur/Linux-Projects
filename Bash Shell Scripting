@@ -4,6 +4,42 @@
 # Date: 20 July, 2023
 # Objectives: 
 #  1. Create a directory
+#  2. Create 25 empty files with file names as <yourName><number>, <yourName><number+1>, <yourName><number+2>, and so on up to 25.
+#  3. You need to generate the numbers and do not hard code it.
+
 
 echo "Bash Shell Scripting"
 
+pwd #checks your current working directory
+
+mkdir directory1  #makes a new directory with name directory1
+
+cd directory1   #changes the current working directory to directory1
+
+ls #lists all files in the directory1
+#it shows empty because there is nothing at this point in the directory1.
+
+#create a variable to store my name
+myName="Anmol"
+
+# for loop with counter i set to 1 and the condition of i less than or equal to 25 and the counter i incremented after every time loop is run
+for (( i=1; i<=25; i++ ))
+    do 
+        touch "${myName}${i}.txt";    #create file using touch command; to use value of a variable, use $ sign
+    done
+#this loop will use i as the counter and loop through 1 to 25 and create files using touch command with the filename of anmoljot1, anmoljot2, anmoljot3, so on upto 25.
+#it will exit the loop when 25 files are created
+
+ls # displays the list of files in the directory1
+
+#output
+# Anmol10.txt  Anmol15.txt  Anmol1.txt   Anmol24.txt  Anmol5.txt
+# Anmol11.txt  Anmol16.txt  Anmol20.txt  Anmol25.txt  Anmol6.txt
+# Anmol12.txt  Anmol17.txt  Anmol21.txt  Anmol2.txt   Anmol7.txt
+# Anmol13.txt  Anmol18.txt  Anmol22.txt  Anmol3.txt   Anmol8.txt
+# Anmol14.txt  Anmol19.txt  Anmol23.txt  Anmol4.txt   Anmol9.txt
+
+
+#type exit at the terminal to close the application
+
+#Congratulaitons!
