@@ -2,6 +2,10 @@
 # Topic: Linux Software Management
 # Author: Anmoljot Kaur
 # Date: 20 July, 2023
+# Objectives: 
+#  1. Update the Linux machine using the package manager
+#  2. Roll back or downgrade a previously updated package through the package manager
+#  3. Install the AWS Command Line Interface (AWS CLI)
 
 #login as ec2-user in putty
 
@@ -9,11 +13,15 @@ echo "Linux Software Management"
 
 cd companyA #to validate that you are in companyA folder
 
+echo "Updating Linux Machine"
+
 sudo yum -y check-update #to querry repositories for available updates
 sudo yum update --security #to apply security related updates
 sudo yum -y upgrade #to update packages
 
 sudo yum install httpd -y #to install httpd
+
+echo "Roll back a package"
 sudo yum history list #to view history of updates
 
 pwd #validates that if you are in companyA folder
@@ -33,9 +41,38 @@ sudo ./aws/install  #runs the program
 aws help #to verify if AWS CLI is working
 #chooose q to exit the help terminal
 
+#Next to AWS CLI in the credential window, choose show and copy the AWS Access key ID, AWS Secret ACcess Key
+
+echo "Configure AWS CLI to connect to your AWS account"
+
 aws configure #configuration command for AWS CLI
-#on the prompts enter AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format
+#on the prompts for AWS Access Key ID and AWS Secret Access Key, leave blank and press enter. For Default region name, enter us-west-2 and for Default output format, enter json.
 
  sudo nano ~/.aws/credentials #to open the credentials file
+#enter the following with the AWS ACcess key and secret key we copied above
+#[default]
+#aws_access_key_id=<your access key ID>
+#aws_secret_access_key=<your access key>
+#aws_session_token=<your session token>
+#press CTRL+O to save then press enter to save the file as original filename
+#press CTRL+X to exit the file
+
+#Navigate to AWS Management console and search for EC2 then Instances tab, Instance named Command Host will be running
+#copy the Instance ID
+
+aws ec2 describe-instance-attribute --instance-id i-00082ea64743e9aa0 --attribute instanceType  #command to describe instance attributes
+#here replace the instance id with the one from the one we copied in last step
+
+#output
+# instanceType
+#{
+#    "InstanceId": "i-00082ea64743e9aa0",
+#    "InstanceType": {
+#        "Value": "t3.micro"
+#    }
+#}
+
+#Congratulations!
+
 
 
